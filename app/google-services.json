@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "554931056756",
+    "project_id": "zurifarm-ke",
+    "storage_bucket": "zurifarm-ke.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554931056756:android:0738bb655ffa58c1d56121",
+        "android_client_info": {
+          "package_name": "com.DevKB.myzuri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554931056756-vc8n535ftafu7tch1826rq76980vauti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaEeUeL33t1ss0oZuEGhJE3LIlyNcDQWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554931056756-vc8n535ftafu7tch1826rq76980vauti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554931056756:android:dd54b066769544c7d56121",
+        "android_client_info": {
+          "package_name": "com.devKB.myzuri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554931056756-vc8n535ftafu7tch1826rq76980vauti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaEeUeL33t1ss0oZuEGhJE3LIlyNcDQWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554931056756-vc8n535ftafu7tch1826rq76980vauti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554931056756:android:cda986256c5a8365d56121",
+        "android_client_info": {
+          "package_name": "com.devkeith.zurifarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554931056756-vc8n535ftafu7tch1826rq76980vauti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaEeUeL33t1ss0oZuEGhJE3LIlyNcDQWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554931056756-vc8n535ftafu7tch1826rq76980vauti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

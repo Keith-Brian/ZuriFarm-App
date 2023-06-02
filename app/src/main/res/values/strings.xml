@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Zuri</string>
+    <string name="backarrow">backArrow</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hi_user_welcome_back">Hi User, Welcome Back</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="log_in">Log in</string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_user">Welcome User</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="control">Control</string>
+    <string name="account">Account</string>
+    <string name="monitor">Monitor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
