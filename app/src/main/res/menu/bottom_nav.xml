@@ -10,7 +10,7 @@
     <item
         android:id="@+id/controlFragment"
         android:title="@string/control"
-        android:icon="@drawable/chat"
+        android:icon="@drawable/ic_monitor"
         />
 
     <item
