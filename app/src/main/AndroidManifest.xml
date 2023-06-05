@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyZuri"
         tools:targetApi="31">
         <activity
-            android:name=".ui.dashboard.DashboardActivity"
+            android:name=".ui.onboarding.DashboardActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.SigningActivity"

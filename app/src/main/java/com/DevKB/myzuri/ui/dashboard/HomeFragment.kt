@@ -17,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeFragment : Fragment(R.id.homeFragment) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
      private lateinit var homeBinding: FragmentHomeBinding
      lateinit var retrofitViewModel: RetrofitViewModel
      private lateinit var data: retfrofitData
