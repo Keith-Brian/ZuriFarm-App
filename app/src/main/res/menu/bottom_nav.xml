@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/monitor"
         android:title="@string/monitor"
         android:icon="@drawable/home"
         />
 
     <item
-        android:id="@+id/controlFragment"
+        android:id="@+id/control"
         android:title="@string/control"
         android:icon="@drawable/ic_monitor"
         />
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profile"
         android:title="@string/account"
         android:icon="@drawable/profile"
         />

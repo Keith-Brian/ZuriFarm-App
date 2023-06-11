@@ -18,7 +18,6 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(dashBinding.root)
 
         initializeNavController()
-
     }
 
     private fun initializeNavController() {

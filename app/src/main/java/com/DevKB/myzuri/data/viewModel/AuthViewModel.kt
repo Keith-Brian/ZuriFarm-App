@@ -28,5 +28,4 @@ class AuthViewModel: ViewModel() {
     public fun logout(){
         authRepo.signOut()
     }
-
 }

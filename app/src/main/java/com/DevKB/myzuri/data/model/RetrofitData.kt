@@ -1,6 +1,6 @@
 package com.DevKB.myzuri.data.model
 
-data class retfrofitData(
+data class RetrofitData(
     val created_at: String,
     val entry_id: Int,
     val field1: String,
