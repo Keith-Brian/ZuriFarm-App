@@ -23,4 +23,7 @@
     <string name="humidity">Humidity</string>
     <string name="soil_moisture">Soil Moisture</string>
     <string name="carbon_oxide">Carbon Oxide</string>
+    <string name="back">back</string>
+    <string name="account_info">Account Info</string>
+    <string name="f_a_r_m">Z-U-R-I-F-A-R-M</string>
 </resources>

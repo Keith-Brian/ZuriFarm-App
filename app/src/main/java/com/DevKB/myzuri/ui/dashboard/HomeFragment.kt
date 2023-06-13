@@ -29,7 +29,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         fetchData()
-
     }
 
     private fun fetchData() {
