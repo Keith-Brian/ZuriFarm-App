@@ -1,4 +1,4 @@
-package com.DevKB.myzuri.data
+package com.DevKB.myzuri.data.model
 
 import com.DevKB.myzuri.data.model.RetrofitData
 import retrofit2.Call

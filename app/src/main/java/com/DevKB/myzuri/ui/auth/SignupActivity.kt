@@ -7,7 +7,7 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.DevKB.myzuri.data.viewModel.AuthViewModel
 import com.DevKB.myzuri.databinding.ActivitySignupBinding
-import com.DevKB.myzuri.ui.onboarding.DashboardActivity
+import com.DevKB.myzuri.ui.dashboard.DashboardActivity
 import com.DevKB.myzuri.utils.ViewUtils.Extension.toast
 import com.google.android.gms.tasks.OnCompleteListener
 

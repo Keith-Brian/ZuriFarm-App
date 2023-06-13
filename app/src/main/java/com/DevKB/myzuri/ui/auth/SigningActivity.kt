@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.DevKB.myzuri.data.viewModel.AuthViewModel
 import com.DevKB.myzuri.databinding.ActivitySigninBinding
-import com.DevKB.myzuri.ui.onboarding.DashboardActivity
+import com.DevKB.myzuri.ui.dashboard.DashboardActivity
 import com.DevKB.myzuri.utils.ViewUtils.Extension.toast
 import com.google.android.gms.tasks.OnCompleteListener
 
@@ -29,7 +29,7 @@ class SigningActivity : AppCompatActivity() {
                 .addOnCompleteListener(OnCompleteListener {
                     if(it.isSuccessful){
                         toast("Login Successful")
-                        val intent = Intent(this,DashboardActivity::class.java)
+                        val intent = Intent(this, DashboardActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {

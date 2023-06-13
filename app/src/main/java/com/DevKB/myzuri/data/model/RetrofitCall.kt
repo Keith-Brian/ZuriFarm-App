@@ -1,7 +1,5 @@
 package com.DevKB.myzuri.data.model
 
-import com.DevKB.myzuri.data.RetroInterface
-import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

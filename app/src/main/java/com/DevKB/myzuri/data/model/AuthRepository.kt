@@ -1,11 +1,6 @@
 package com.DevKB.myzuri.data.model
 
 import android.app.Application
-import android.content.Intent
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import com.DevKB.myzuri.ui.onboarding.DashboardActivity
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth

@@ -1,270 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/refreshLayout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="RelativeOverlap"
     tools:context=".ui.dashboard.HomeFragment">
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-       <View
-           android:id="@+id/homeBar"
-           android:layout_width="match_parent"
-           android:layout_height="150dp"
-           android:background="@color/green"/>
+            <View
+                android:id="@+id/homeBar"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/green"/>
 
-       <TextView
+            <TextView
 
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="10dp"
-           android:layout_marginTop="10dp"
-           android:layout_marginEnd="10dp"
-           android:layout_marginBottom="10dp"
-           android:fontFamily="@font/josefinsans_bold"
-           android:text="@string/welcomeUser"
-           android:textColor="@color/black"
-           android:textSize="30sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:text="@string/welcomeUser"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
 
-       <de.hdodenhof.circleimageview.CircleImageView
-           android:id="@+id/profile_dummy"
-           android:layout_width="100dp"
-           android:layout_height="100dp"
-           android:layout_alignParentEnd="true"
-           android:layout_marginTop="40dp"
-           android:layout_marginEnd="20dp"
-           android:src="@drawable/lupita_dummy" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_dummy"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/lupita_dummy" />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="10dp"
-           android:layout_marginBottom="5dp"
-           android:layout_alignBottom="@id/profile_dummy"
-           android:text="@string/my_dashboard"
-           android:textSize="25sp"
-           android:textColor="@color/white"
-           android:fontFamily="@font/josefinsans_bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignBottom="@id/profile_dummy"
+                android:text="@string/my_dashboard"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/josefinsans_bold" />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/z_u_r_i_f_a_r_m"
-           android:textSize="20sp"
-           android:fontFamily="@font/josefinsans_bold"
-           android:textColor="@color/black"
-           android:layout_alignParentEnd="true"
-           android:layout_marginTop="5dp"
-           android:layout_marginEnd="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/z_u_r_i_f_a_r_m"
+                android:textSize="20sp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"/>
 
-       <GridLayout
-           android:id="@+id/gridLayout"
-           android:layout_below="@id/homeBar"
-           android:layout_width="match_parent"
-           android:layout_height="350dp"
-           android:rowCount="2"
-           android:columnCount="2"
-           android:layout_margin="10dp">
+            <GridLayout
+                android:layout_below="@id/homeBar"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:rowCount="2"
+                android:columnCount="2"
+                android:layout_margin="10dp">
 
-           <androidx.cardview.widget.CardView
-               android:layout_width="0dp"
-               android:layout_height="0dp"
-               android:layout_rowWeight="1"
-               android:layout_columnWeight="1"
-               android:layout_margin="5dp"
-               app:cardCornerRadius="15dp"
-               app:cardElevation="10dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="vertical">
-
-
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="Temperature"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/black"
-                       android:textSize="16sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal" />
-
-                   <ImageView
-                       android:layout_width="50dp"
-                       android:layout_height="50dp"
-                       android:layout_gravity="center_horizontal"
-                       android:layout_marginTop="10dp"
-                       android:contentDescription="@string/none"
-                       android:src="@drawable/chat" />
-
-                   <TextView
-                       android:id="@+id/temp"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="0.00"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/green"
-                       android:textSize="30sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal"/>
-
-               </LinearLayout>
-           </androidx.cardview.widget.CardView>
-
-           <androidx.cardview.widget.CardView
-               android:layout_width="0dp"
-               android:layout_height="0dp"
-               android:layout_rowWeight="1"
-               android:layout_columnWeight="1"
-               android:layout_margin="5dp"
-               app:cardCornerRadius="15dp"
-               app:cardElevation="10dp">
-
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
 
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="Humidity"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/black"
-                       android:textSize="16sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/temperature"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal" />
 
-                   <ImageView
-                       android:layout_width="50dp"
-                       android:layout_height="50dp"
-                       android:layout_gravity="center_horizontal"
-                       android:layout_marginTop="10dp"
-                       android:contentDescription="@string/none"
-                       android:src="@drawable/chat" />
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/none"
+                            android:src="@drawable/chat" />
 
-                   <TextView
-                       android:id="@+id/humi"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="0.00"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/green"
-                       android:textSize="30sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:id="@+id/temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_zero"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/green"
+                            android:textSize="30sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
 
-               </LinearLayout>
-           </androidx.cardview.widget.CardView>
-           <androidx.cardview.widget.CardView
-               android:layout_width="0dp"
-               android:layout_height="0dp"
-               android:layout_rowWeight="1"
-               android:layout_columnWeight="1"
-               android:layout_margin="5dp"
-               app:cardCornerRadius="15dp"
-               app:cardElevation="10dp">
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
 
-
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="Soil Moisture"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/black"
-                       android:textSize="16sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal" />
-
-                   <ImageView
-                       android:layout_width="50dp"
-                       android:layout_height="50dp"
-                       android:layout_gravity="center_horizontal"
-                       android:layout_marginTop="10dp"
-                       android:contentDescription="@string/none"
-                       android:src="@drawable/chat" />
-
-                   <TextView
-                       android:id="@+id/moist"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="0.00"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/green"
-                       android:textSize="30sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal"/>
-
-               </LinearLayout>
-           </androidx.cardview.widget.CardView>
-           <androidx.cardview.widget.CardView
-               android:layout_width="0dp"
-               android:layout_height="0dp"
-               android:layout_rowWeight="1"
-               android:layout_columnWeight="1"
-               android:layout_margin="5dp"
-               app:cardCornerRadius="15dp"
-               app:cardElevation="10dp">
-
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
 
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="Carbon Oxide"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/black"
-                       android:textSize="16sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/humidity"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal" />
 
-                   <ImageView
-                       android:layout_width="50dp"
-                       android:layout_height="50dp"
-                       android:layout_gravity="center_horizontal"
-                       android:layout_marginTop="10dp"
-                       android:contentDescription="@string/none"
-                       android:src="@drawable/chat" />
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/none"
+                            android:src="@drawable/chat" />
 
-                   <TextView
-                       android:id="@+id/concentration"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="0.00"
-                       android:fontFamily="@font/josefinsans_medium"
-                       android:textColor="@color/green"
-                       android:textSize="30sp"
-                       android:layout_marginTop="5dp"
-                       android:textStyle="bold"
-                       android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_zero"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/green"
+                            android:textSize="30sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
 
-               </LinearLayout>
-           </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
 
-       </GridLayout>
-   </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/soil_moisture"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/none"
+                            android:src="@drawable/chat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_zero"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/green"
+                            android:textSize="30sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/carbon_oxide"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/none"
+                            android:src="@drawable/chat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_zero"
+                            android:fontFamily="@font/josefinsans_medium"
+                            android:textColor="@color/green"
+                            android:textSize="30sp"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+        </RelativeLayout>
+
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
