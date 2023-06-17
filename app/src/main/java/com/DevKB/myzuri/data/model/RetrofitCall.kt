@@ -5,10 +5,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitCall{
 
-    val baseUrl = "https://api.thingspeak.com/"
+    private const val baseURL = "https://api.thingspeak.com/"
 
     fun getInstance():Retrofit{
-        return Retrofit.Builder().baseUrl(baseUrl)
+        return Retrofit.Builder().baseUrl(baseURL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

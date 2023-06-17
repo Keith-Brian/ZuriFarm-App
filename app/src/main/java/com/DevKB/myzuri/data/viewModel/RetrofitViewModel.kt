@@ -8,16 +8,16 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 private lateinit var retrofitApi: RetrofitCall
 private lateinit var retroCall: RetrofitCall
 
 class RetrofitViewModel: ViewModel() {
 
-    var temperature: String? =null
+    var temperature: String? =""
     var humidity: String? =null
     var moisture: String? =null
     var concentration: String? =null
+
 
 }
 

@@ -29,6 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         fetchData()
+
     }
 
     private fun fetchData() {
@@ -45,7 +46,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     monitorBinding.temp.text = retrofitViewModel.temperature
                 }
             }
-
             override fun onFailure(call: Call<RetrofitData?>, t: Throwable) {
                 println("Retrofit Call failed!")
                 monitorBinding.refreshLayout.isRefreshing = false
@@ -53,3 +53,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         })
     }
 }
+
+
