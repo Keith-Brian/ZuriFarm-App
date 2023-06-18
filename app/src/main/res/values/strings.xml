@@ -26,4 +26,9 @@
     <string name="back">back</string>
     <string name="account_info">Account Info</string>
     <string name="f_a_r_m">Z-U-R-I-F-A-R-M</string>
+    <string name="control_panel">Control Panel</string>
+    <string name="pump_control">Pump Control</string>
+    <string name="fan_control">FAN CONTROL</string>
+    <string name="set_irrigation">SET IRRIGATION</string>
+    <string name="set_time">Set Time</string>
 </resources>
