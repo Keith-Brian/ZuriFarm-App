@@ -18,9 +18,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage
 class AdafruitViewModel: ViewModel() {
 
     lateinit var mqttClient: MqttAndroidClient
-    var email: String? = ""
-    val serverURL ="tcp://test.mosquitto.org"
-    val TAG = "MqttClient"
+    private val serverURL ="tcp://test.mosquitto.org:1883"
+    private val tag = "MqttClient"
 
     private var temperature = MutableLiveData<String>()
     private var moisture = MutableLiveData<String>()
@@ -52,12 +51,12 @@ class AdafruitViewModel: ViewModel() {
             }
 
             override fun messageArrived(topic: String?, message: MqttMessage?) {
-                val mqtt_message = String(message!!.payload)
+                val messagePayload = String(message!!.payload)
                 when(topic){
-                    "temp" -> temperature.value = mqtt_message
-                    "humi" ->humidity.value = mqtt_message
-                    "conc" -> humidity.value = mqtt_message
-                    "moist"-> humidity.value = mqtt_message
+                    "mytemp" -> temperature.value = messagePayload
+                    "humidity" -> humidity.value = messagePayload
+                    "concentration" -> concentration.value = messagePayload
+                    "moisture"-> moisture.value = messagePayload
 
                     else -> println("Unknown Channel")
                 }
@@ -78,11 +77,11 @@ class AdafruitViewModel: ViewModel() {
             mqttClient.connect(serverOptions(),null,object: IMqttActionListener {
                 override fun onSuccess(asyncActionToken: IMqttToken?) {
                     mqttClient.setBufferOpts(disconnectedBufferOptions())
-                    subscribe("temp")
-                    subscribe("humi")
-                    subscribe("conc")
-                    subscribe("moist")
-                    displayLog("Connected to Broker!")
+                    subscribe("mytemp")
+                    subscribe("humidity")
+                    subscribe("concentration")
+                    subscribe("moisture")
+                  //  displayLog("Connected to Broker!")
                 }
 
                 override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
@@ -166,7 +165,7 @@ class AdafruitViewModel: ViewModel() {
     }
 
     private fun displayLog(message: String){
-        Log.d(TAG, message)
+        Log.d(tag, message)
     }
 
 }

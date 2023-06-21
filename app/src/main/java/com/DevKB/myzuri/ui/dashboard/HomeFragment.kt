@@ -27,7 +27,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
        // adafruitViewModel.subscribe("temp")
 
         adafruitViewModel.temp().observe(requireActivity(), Observer {
-            monitorBinding.temp.text = it
+            monitorBinding.Temp.text = it
         })
 
         adafruitViewModel.humi().observe(requireActivity(), Observer {
@@ -43,11 +43,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         })
 
         monitorBinding.refreshLayout.setOnRefreshListener {
-            monitorBinding.temp.text = adafruitViewModel.email.toString()
             monitorBinding.refreshLayout.isRefreshing = false
         }
-
-        monitorBinding.temp.text = adafruitViewModel.email.toString()
 
     }
 }

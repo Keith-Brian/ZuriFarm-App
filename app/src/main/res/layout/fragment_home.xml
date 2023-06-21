@@ -105,7 +105,7 @@
                             android:src="@drawable/chat" />
 
                         <TextView
-                            android:id="@+id/temp"
+                            android:id="@+id/Temp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/null_zero"
