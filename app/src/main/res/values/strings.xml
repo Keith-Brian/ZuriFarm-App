@@ -31,4 +31,6 @@
     <string name="fan_control">FAN CONTROL</string>
     <string name="set_irrigation">SET IRRIGATION</string>
     <string name="set_time">Set Time</string>
+    <string name="irrigation_scheduled_at">Irrigation scheduled at:</string>
+    <string name="_12_45">12:45</string>
 </resources>

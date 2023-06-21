@@ -8,6 +8,7 @@ import android.os.Looper
 import com.DevKB.myzuri.R
 import com.DevKB.myzuri.databinding.ActivityMainBinding
 import com.DevKB.myzuri.ui.auth.SignupActivity
+import com.DevKB.myzuri.ui.dashboard.DashboardActivity
 
 class SplashscreenActivity : AppCompatActivity() {
     private lateinit var splashBinding: ActivityMainBinding
@@ -17,7 +18,7 @@ class SplashscreenActivity : AppCompatActivity() {
         setContentView(splashBinding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this,SignupActivity::class.java)
+            val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
             finish()
 

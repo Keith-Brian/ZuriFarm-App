@@ -154,6 +154,7 @@
                             android:src="@drawable/chat" />
 
                         <TextView
+                            android:id="@+id/humid"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/null_zero"
@@ -201,6 +202,7 @@
                             android:src="@drawable/chat" />
 
                         <TextView
+                            android:id="@+id/moist"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/null_zero"
@@ -248,6 +250,7 @@
                             android:src="@drawable/chat" />
 
                         <TextView
+                            android:id="@+id/concen"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/null_zero"

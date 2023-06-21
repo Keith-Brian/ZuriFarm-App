@@ -7,7 +7,6 @@
     tools:context=".ui.dashboard.ControlFragment">
 
 
-
             <View
                 android:id="@+id/controlBar"
                 android:layout_width="match_parent"
@@ -80,7 +79,7 @@
                     android:contentDescription="@string/none"/>
 
                 <Switch
-                    android:id="@+id/pump_switch"
+                    android:id="@+id/mypumpswitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -161,7 +160,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/irrigation_timePicker"
-                    android:text="Irrigation scheduled at"
+                    android:text="@string/irrigation_scheduled_at"
+                    android:textSize="16sp"
                     android:fontFamily="@font/josefinsans_medium"
                     android:textColor="@color/black"/>
 
@@ -172,7 +172,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:layout_below="@id/irrigation_info"
-                    android:text="12:45"
+                    android:text="@string/_12_45"
                     android:textSize="30sp"
                     android:fontFamily="@font/josefinsans_medium"
                     android:textColor="@color/green"/>
@@ -183,6 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/irrigation_time"
                     android:text="@string/set_time"
+                    android:textAllCaps="true"
                     android:fontFamily="@font/josefinsans_bold"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
