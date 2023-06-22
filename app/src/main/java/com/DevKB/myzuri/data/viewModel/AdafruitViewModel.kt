@@ -21,6 +21,9 @@ class AdafruitViewModel: ViewModel() {
     private val serverURL ="tcp://test.mosquitto.org:1883"
     private val tag = "MqttClient"
 
+    var isConnected = MutableLiveData<Boolean>()
+    var switchState = MutableLiveData<Boolean>()
+
     private var temperature = MutableLiveData<String>()
     private var moisture = MutableLiveData<String>()
     private var humidity = MutableLiveData<String>()
@@ -41,6 +44,14 @@ class AdafruitViewModel: ViewModel() {
     fun conc(): LiveData<String>{
         return concentration
     }
+    // state-Listeners
+    fun connected(): LiveData<Boolean>{
+        return isConnected
+    }
+
+    fun switched(): LiveData<Boolean>{
+        return switchState
+    }
 
 
     fun connect(context: Context){
@@ -48,6 +59,7 @@ class AdafruitViewModel: ViewModel() {
         mqttClient.setCallback(object: MqttCallbackExtended {
             override fun connectionLost(cause: Throwable?) {
                 displayLog("Connection Lost!")
+                isConnected.value =false
             }
 
             override fun messageArrived(topic: String?, message: MqttMessage?) {
@@ -64,6 +76,7 @@ class AdafruitViewModel: ViewModel() {
             }
 
             override fun deliveryComplete(token: IMqttDeliveryToken?) {
+                switchState.value = true
                 displayLog("Delivered")
             }
 
@@ -77,6 +90,7 @@ class AdafruitViewModel: ViewModel() {
             mqttClient.connect(serverOptions(),null,object: IMqttActionListener {
                 override fun onSuccess(asyncActionToken: IMqttToken?) {
                     mqttClient.setBufferOpts(disconnectedBufferOptions())
+                    isConnected.value = true
                     subscribe("mytemp")
                     subscribe("humidity")
                     subscribe("concentration")
@@ -121,6 +135,7 @@ class AdafruitViewModel: ViewModel() {
                 }
 
                 override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
+                    switchState.value = false
                     displayLog("Failed to publish")
                 }
 
