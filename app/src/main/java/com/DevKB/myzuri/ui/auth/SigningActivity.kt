@@ -20,6 +20,12 @@ class SigningActivity : AppCompatActivity() {
         val authViewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
         authViewModel.getInstance(this.application)
 
+        loginBinding.signUpTv.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         loginBinding.btnLogin.setOnClickListener {
 
             authViewModel.email = loginBinding.loginEmail.text.toString()

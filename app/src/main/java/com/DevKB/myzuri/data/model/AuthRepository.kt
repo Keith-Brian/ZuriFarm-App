@@ -29,5 +29,9 @@ class AuthRepository {
         auth.signOut()
     }
 
+    fun getUser(){
+        auth.currentUser
+    }
+
 }
 

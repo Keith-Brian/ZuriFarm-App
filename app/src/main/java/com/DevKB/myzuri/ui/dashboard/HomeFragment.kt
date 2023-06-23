@@ -24,6 +24,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         adafruitViewModel = ViewModelProvider(this).get(AdafruitViewModel::class.java)
         //connecting to the server option
         adafruitViewModel.connect(requireContext())
+
        // adafruitViewModel.subscribe("temp")
 
         adafruitViewModel.temp().observe(requireActivity(), Observer {

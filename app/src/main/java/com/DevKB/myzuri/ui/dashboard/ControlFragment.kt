@@ -36,6 +36,11 @@ class ControlFragment : Fragment(R.layout.fragment_control) {
         //connect to the broker
         adafruitModel.connect(requireContext())
 
+       controlBinding.refreshConnect.setOnRefreshListener {
+           adafruitModel.connect(requireContext())
+           controlBinding.refreshConnect.isRefreshing = false
+       }
+
         adafruitModel.connected().observe(requireActivity(), Observer {
             isConnected = it
             if (!isConnected){
@@ -106,26 +111,30 @@ class ControlFragment : Fragment(R.layout.fragment_control) {
             }
 
         controlBinding.setTime.setOnClickListener {
-            val timePicker = MaterialTimePicker.Builder()
-                .setTimeFormat(CLOCK_24H)
-                .setHour(12)
-                .setMinute(0)
-                .setTitleText("SCHEDULE IRRIGATION")
-                .build()
-            timePicker.show(childFragmentManager,"TAG")
-
-            timePicker.addOnPositiveButtonClickListener {
-                hour = timePicker.hour.toString()
-                min = timePicker.minute.toString()
-                setTime = hour.plus(min)
-
-                controlBinding.irrigationTime.text = hour.plus(":").plus(min)
-
-                adafruitModel.publish("time", setTime!!,1)
-            }
+        openTimePicker()
 
         }
 
         }
 
+    private fun openTimePicker() {
+        val timePicker = MaterialTimePicker.Builder()
+            .setTimeFormat(CLOCK_24H)
+            .setHour(12)
+            .setMinute(0)
+            .setTitleText("SCHEDULE IRRIGATION")
+            .build()
+        timePicker.show(childFragmentManager,"TAG")
+
+        timePicker.addOnPositiveButtonClickListener {
+            hour = timePicker.hour.toString()
+            min = timePicker.minute.toString()
+            setTime = hour.plus(min)
+
+            controlBinding.irrigationTime.text = hour.plus(":").plus(min)
+
+            adafruitModel.publish("time", setTime!!,1)
+        }
     }
+
+}
