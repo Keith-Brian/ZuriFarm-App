@@ -10,8 +10,7 @@ import com.DevKB.myzuri.databinding.ActivitySigninBinding
 import com.DevKB.myzuri.ui.dashboard.DashboardActivity
 import com.DevKB.myzuri.utils.ViewUtils.Extension.toast
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
+
 
 class SigningActivity : AppCompatActivity() {
     private lateinit var loginBinding: ActivitySigninBinding
@@ -36,11 +35,11 @@ class SigningActivity : AppCompatActivity() {
                 loginBinding.loginEmail.error = "Email cannot be blank!"
                 return false
             }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                loginBinding.loginEmail.error = "Invalid Password"
+                loginBinding.loginEmail.error = "Invalid Email!"
                 return false
             }else if(password.isEmpty()){
                 loginBinding.loginPass.error = "Password Cannot be blank!"
-                return true
+                return false
             }else{
                 loginBinding.loginEmail.error = null
                 loginBinding.loginPass.error = null

@@ -24,9 +24,6 @@ class ControlFragment : Fragment(R.layout.fragment_control) {
     private var min: String?= null
     private var setTime: String? = null
 
-    private var isConnected = false
-    private var isSwitched = false
-
    // @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -41,74 +38,26 @@ class ControlFragment : Fragment(R.layout.fragment_control) {
            controlBinding.refreshConnect.isRefreshing = false
        }
 
-        adafruitModel.connected().observe(requireActivity(), Observer {
-            isConnected = it
-            if (!isConnected){
-                adafruitModel.connect(requireContext())
-            }
-        })
-
-        adafruitModel.switched().observe(requireActivity(), Observer {
-            isSwitched = it
-        })
-
         controlBinding.myPumpSwitch.setOnCheckedChangeListener { _, isChecked ->
             if(isChecked) {
-                if (isConnected) {
                     adafruitModel.publish("pump", "ON", 1)
-                    Log.d("Listener","$isSwitched")
-                    println("Hey: $isSwitched")
-
-                    if (isSwitched){
-                        makeText(requireContext(),"Pump switched ON", LENGTH_LONG).show()
+                    makeText(requireContext(),"Pump switched ON", LENGTH_LONG).show()
                     } else {
-                        makeText(requireContext(), "Failed to switch ON", LENGTH_LONG).show()
-                        controlBinding.myPumpSwitch.isChecked = false
-                    }
-                }
-            } else {
-                if (isConnected) {
-                    adafruitModel.publish("pump", "OFF", 1)
-
-                    if (isSwitched){
-                        makeText(requireContext(),"Pump switched OFF", LENGTH_LONG).show()
-                    } else {
-                        makeText(requireContext(), "Failed to Switch Pump OFF", LENGTH_LONG).show()
-                        controlBinding.myPumpSwitch.isChecked = true
+                        adafruitModel.publish("pump", "OFF", 1)
+                        makeText(requireContext(), "Pump to switched OFF", LENGTH_LONG).show()
                     }
                 }
 
-            }
-        }
 
-        controlBinding.myFanSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if(isChecked) {
-                if (isConnected) {
-                    adafruitModel.publish("fan", "ON", 1)
-                    Log.d("Listener","$isSwitched")
-                    println("Hey: $isSwitched")
-
-                    if (isSwitched){
-                        makeText(requireContext(),"Fan switched ON", LENGTH_LONG).show()
-                    } else {
-                        makeText(requireContext(), "Failed to switch ON", LENGTH_LONG).show()
-                        controlBinding.myFanSwitch.isChecked = false
-                    }
-                }
-                } else {
-                if (isConnected) {
-                    adafruitModel.publish("fan", "OFF", 1)
-
-                    if (isSwitched){
-                        makeText(requireContext(),"Fan switched OFF", LENGTH_LONG).show()
-                    } else {
-                        makeText(requireContext(), "Failed to Switch Fan OFF", LENGTH_LONG).show()
-                        controlBinding.myFanSwitch.isChecked = true
-                    }
-                }
-
-            }
-            }
+       controlBinding.myFanSwitch.setOnCheckedChangeListener { _, isChecked ->
+           if(isChecked) {
+               adafruitModel.publish("fan", "ON", 1)
+               makeText(requireContext(),"Fan switched ON", LENGTH_LONG).show()
+           } else {
+               adafruitModel.publish("fan", "OFF", 1)
+               makeText(requireContext(), "Fan to switched OFF", LENGTH_LONG).show()
+           }
+       }
 
         controlBinding.setTime.setOnClickListener {
         openTimePicker()
