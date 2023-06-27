@@ -70,8 +70,8 @@ class ControlFragment : Fragment(R.layout.fragment_control) {
         val timePicker = MaterialTimePicker.Builder()
             .setTimeFormat(CLOCK_24H)
             .setHour(12)
-            .setMinute(0)
-            .setTitleText("SCHEDULE IRRIGATION")
+            .setMinute(40)
+            .setTitleText("SCHEDULE IRRIGATION!")
             .build()
         timePicker.show(childFragmentManager,"TAG")
 
