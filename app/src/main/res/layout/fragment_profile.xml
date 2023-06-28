@@ -78,13 +78,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textProfession" />
 
-    <View
-        android:layout_width="90dp"
-        android:layout_height="3dp"
-        android:background="@drawable/rounded_corners_white"
-        app:layout_constraintEnd_toEndOf="@+id/textPersonal"
-        app:layout_constraintStart_toStartOf="@+id/textPersonal"
-        app:layout_constraintTop_toBottomOf="@id/textPersonal" />
 
     <TextView
         android:id="@+id/textOther"
