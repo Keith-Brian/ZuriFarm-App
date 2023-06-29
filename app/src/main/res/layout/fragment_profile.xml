@@ -79,19 +79,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textProfession" />
 
 
-    <TextView
-        android:id="@+id/textOther"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/josefinsans_regular"
-        android:text="Other"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textPersonal"
-        app:layout_constraintStart_toEndOf="@id/textPersonal"
-        app:layout_constraintTop_toTopOf="@+id/textPersonal" />
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/userImageProfile"
         android:layout_width="90dp"
